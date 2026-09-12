@@ -5,8 +5,10 @@
         android:title="@string/pref_emu_general"
         app:iconSpaceReserved="false">
 
+        <!-- تم إضافة التفعيل الافتراضي لعداد الفريمات -->
         <SwitchPreferenceCompat
             android:key="ui.showfps"
+            android:defaultValue="true"
             android:persistent="false"
             android:summary="@string/pref_emu_general_fps_display_summary"
             android:title="@string/pref_emu_general_fps_display_title"
@@ -31,8 +33,9 @@
         android:title="@string/pref_emu_video"
         app:iconSpaceReserved="false">
 
+        <!-- تم تغيير القيمة من 1 إلى 0 ليكون OpenGL هو الافتراضي -->
         <ListPreference
-            android:defaultValue="1"
+            android:defaultValue="0"
             android:entries="@array/pref_emu_video_gs_handler_entries"
             android:entryValues="@array/pref_emu_video_gs_handler_values"
             android:key="video.gshandler"
@@ -42,6 +45,7 @@
             app:iconSpaceReserved="false"
             app:useSimpleSummaryProvider="true" />
 
+        <!-- الدقة الافتراضية محددة مسبقاً على 1 (الأساسية) -->
         <ListPreference
             android:defaultValue="1"
             android:entries="@array/pref_emu_video_res_factor_entries"
@@ -60,8 +64,10 @@
             android:title="@string/pref_emu_video_widescreen_title"
             app:iconSpaceReserved="false" />
 
+        <!-- تم إضافة تعطيل الفلترة الثقيلة افتراضياً لتخفيف الضغط -->
         <SwitchPreferenceCompat
             android:key="renderer.opengl.forcebilineartextures"
+            android:defaultValue="false"
             android:persistent="false"
             android:summary="@string/pref_emu_video_force_bilinear_summary"
             android:title="@string/pref_emu_video_force_bilinear_title"
